@@ -1,7 +1,8 @@
 
 //inicialização de variáveis globais para verificar se as 3 opções do menu foram selecionadas
-let orderStatus = 0;
-let typeSelected = 0;
+let foodSelected = 0;
+let beverageSelected = 0;
+let dessertSelected = 0;
 
 //Adiciona ou remove o layout de selecionado no item clicado pelo usuario
 function selectMenuOption(menuOptionSelected){
@@ -28,18 +29,18 @@ function selectMenuOption(menuOptionSelected){
 
 //Verifica se o usuario selecionou os 3 itens do menu
 function checkOrderStatus(classOption){
-    if(typeSelected === 0){
-        typeSelected = classOption;
-    } else{
-        if(typeSelected !== classOption){
-            orderStatus++;
-            if(orderStatus === 2){
-                enableOrderButton();
-            }
-            typeSelected = classOption;
-        }
+
+    if(foodSelected === 0 && classOption === "menu__options-foods"){
+        foodSelected = 1;
+    } else if(beverageSelected === 0 && classOption === "menu__options-beverages"){
+        beverageSelected = 1;
+    } else if(dessertSelected === 0 && classOption === "menu__options-desserts"){
+        dessertSelected = 1;
     }
 
+    if((foodSelected + beverageSelected + dessertSelected) === 3){
+        enableOrderButton();
+    }
 }
 
 //Habilita o botao para o usuario fechar o pedido
