@@ -1,6 +1,7 @@
 /* 0.0 - Tags */
 body{
     background-color: #eee;
+    position: relative;
 }
 
 main{
@@ -129,7 +130,76 @@ p{
     background-color: #32b72f;
 }
 
-/** 4.0 - Auxiliar **/
+/** 4.0 - Order Box **/
+.order{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.order__box{
+    background-color: #50d074;
+    margin: auto;
+    width: 91vw;
+    border-radius: 9px;
+    box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.order__box-title{
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin: 21px 0 28px 60px;
+    width: 100%;
+}
+
+.order__box-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 26px 20px 26px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.order__box-total{
+    font-weight: 700;
+}
+
+.order__box-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order__box-confirm-btn{
+    width: 87vw;
+    height: 52px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 100px;
+    color: #50d074;
+    font-weight: 700;
+    font-size: 22px;
+    border: none;
+}
+
+.order__box-cancel-btn{
+    border: none;
+    background-color: #50d074;
+    height: 52px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/** 5.0 - Auxiliar **/
 .hidden{
     display: none;
 }
